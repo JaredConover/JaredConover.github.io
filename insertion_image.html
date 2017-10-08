@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">    
+        <title>Images</title>
+        <meta name="author" content="Prénom Nom" >
+        <meta name="description" content="Mettre ici un résumé descriptif du contenu de la page avec des mots-clés" >
+        <meta name="robots" content="index,follow" >
+        <link rel="shortcut icon" type="images/x-icon" href="favicon.ico" >    
+        <link rel="stylesheet" href="css/main.css" >
+        <script src="js/main.js"></script>
+	
+		<!-- 		
+			commentaire conditionnel pour rendre compatible les nouvelles balises structurantes de HTML5 
+		-->
+		
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+    <body>
+		Voici une première image sans attribut particulier : 
+	<br>
+		<center><img src="image1.gif"></center>
+	<br>
+	<br>
+		Une image avec un bord de taille 3 : 
+	<br>
+		<center><img src="image2.gif"></center>
+	<br>
+	<br>
+		Il est souvent utile de préciser la taille de l'image pour que le navigateur conaisse la taille de l'emplacement a réserver :
+	<br>
+		<center><img src="image3.gif" border=0 width="88" height="31"></center>
+	<br>
+	<br>
+		Si l'image n'est pas trouvée par le navigateur (99% du temps à cause d'un chemin d'accès incorrect), on affichera un petit message à coté de la croix rouge qui signale que l'image est manquante. Ce texte sera également affiché si on laisse la souris sur l'image pendant quelques secondes.
+	<br>
+		<CENTER><img src="image4.gif" border="0" width="88" height="31" alt="Logo CDS"></CENTER>
+
+
+	</body>
+</html>
