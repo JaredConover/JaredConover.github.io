@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">    
+        <title>Menu</title>
+        <meta name="Jared Conover" content="Prénom Nom" >
+        <meta name="description" content="Mettre ici un résumé descriptif du contenu de la page avec des mots-clés" >
+        <meta name="robots" content="index,follow" >
+        <link rel="shortcut icon" type="images/x-icon" href="favicon.ico" >    
+        <link rel="stylesheet" href="css/main.css" >
+        <script src="js/main.js"></script>
+	
+		<!-- 		
+			commentaire conditionnel pour rendre compatible les nouvelles balises structurantes de HTML5 
+		-->
+		
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+    <body>
+
+    	<script>
+    		function showText(text){
+    			document.getElementById("text").innerHTML=text;
+			}
+			function hide(){
+    			document.getElementById("text").innerHTML="";
+			}
+		</script>
+    	
+    	<table width="100%" border="0">
+    		<tr>
+    			<td width="33%" height="130" align="center"><h1><a href="#"><font color="white">Galerie Photos</font></a></h1></td>
+    			<td width="34%" align="center"><h1><a href="#"><font color="white">Sources</font></a></h1></td>
+    			<td width="33%" align="center"><h1 onmouseover="showText('Jared Conover')" onmouseout="hide()"><a href="#"><font color="white">?<div id="text"></div></font></a></h1></td>
+    		</tr>
+    	</table>
+    	
+
+    	
+    	
+  
+
+
+	</body>
+</html>
