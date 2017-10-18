@@ -1,0 +1,177 @@
+/* styles global */
+
+body {
+    background-image: url(../images/roger10.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.header {
+    position: relative;
+    overflow: hidden  
+}
+
+#title {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    font-size: 90px;
+    font-family: 'Fascinate', fantasy;
+    font-stretch: ultra-expanded;
+    font-variant: small-caps;
+    font-style: oblique;
+    position: absolute;
+    top: 10%;
+    left: 32%
+}
+
+
+a:hover {
+    background-color: rgba(188, 9, 182, 0.32);            
+} 
+
+a:visited {
+    color: white;    
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+.nav {
+    position: relative;
+    height: 80px;
+}
+
+#nav1 {
+    position: absolute;
+    top: 4%;
+    left: 4%;
+    color: white;
+    font-size: 35px;
+    font-family: fantasy, copperplate;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#nav2 {
+    position: absolute;
+    top: 4%;
+    left: 33%;
+    color: white;
+    font-size: 35px;
+    font-family: fantasy, copperplate;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#nav3 {
+    position: absolute;
+    top: 4%;
+    left: 61%;
+    color: white;
+    font-size: 35px;
+    font-family: fantasy, copperplate;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#nav4 {
+    position: absolute;
+    top: 4%;
+    left: 92%;
+    color: white;
+    font-size: 35px;
+    font-family: fantasy, 'copperplate';
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+/* styles index.html */
+
+#photolink {
+    margin-top: 30px;
+}
+
+.container {
+  position: relative;
+  width: 100%;  
+}
+
+.container:before,
+.container:after {
+    content: "";
+    display: table;
+}
+
+.container:after {
+    clear: both;
+}
+
+.col {
+  float:left;
+  width: 50%;
+  height: inherit; 
+  overflow: 
+}
+
+.col:last-child {
+  float: right;  
+}
+
+#pic1 {
+    float: left;
+    margin-left: 60px;
+    margin-top: 30px;
+    width: 300px;
+    height: 200px;
+        
+}
+
+#pic2 {
+    float: right;
+    margin-right: 60px;
+    margin-top: 30px;
+    width: 300px;
+    height: 200px;
+}
+
+#link1 {
+    float: left;
+    margin-left: 60px;
+        
+}
+
+#link2 {
+    float: right;
+    margin-right: 60px;
+    
+}
+
+
+p {
+    background-color: rgba(22, 110, 212, 0.5);
+    color: aliceblue;
+    
+    text-align: justify;
+    margin: 10px 70px;    
+}
+
+h2 {
+    color: darkorchid;
+    text-align: left;
+    margin-left: 40px;
+}
+
+#content {
+    margin-top: 80px
+}
+
+
+
+/* styles galerie.html */
+
+/* styles sources.html */
+
+
+
+
+
+
+
