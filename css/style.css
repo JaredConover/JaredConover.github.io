@@ -225,6 +225,16 @@ footer {
 
 .mySlides {display:none;}
 
+.slideshow {
+    width: 50%;
+    height: 500px;
+    margin-left: 25%;
+    
+}
+#slide {
+    height: inherit;
+    
+}
 
 
 
