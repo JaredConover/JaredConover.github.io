@@ -222,36 +222,39 @@ footer {
     height: 200px;
 }
 
-#slideshow{
-    margin: 50px auto; 
-    position: relative; 
-    width: 240px; 
-    height: 240px; 
-    padding: 10px; 
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
-}
 
-#slideshow>div { 
-    position: absolute; 
-    top: 10px; 
-    left: 10px; 
-    right: 10px; 
-    bottom: 10px; 
-}
+.mySlides {display:none;}
 
-#slide {
-    height: 500px;
-    width: 800px;
-    margin-left: 20%
-}
+
+
 
 /*.mySlides {
     display: none;
 }*/
 
 /* styles sources.html */
+#src {
+    height: inherit;
+    width: 50%;
+    background-color: rgba(188, 9, 182, 0.32);
+    margin-left: 23%;
+    margin-bottom: 40px;
+    padding: 20px;
+    color: aliceblue;
+}
 
+#lnk {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color:blueviolet;
+}
 /* styles contact.html*/
+
 .formulaire {
     height: inherit;
     width: 50%;
@@ -259,6 +262,7 @@ footer {
     margin-left: 23%;
     margin-bottom: 40px;
     padding: 20px;
+    color: aliceblue;
 }
 
 input[type=text], select {
@@ -300,11 +304,13 @@ textarea {
 }
 
 h4 {
-    margin-bottom: 8px;
-    
+    margin-bottom: 8px;  
 
 }
 
+iframe {
+    margin-left: 28%;
+}
 
 
 
