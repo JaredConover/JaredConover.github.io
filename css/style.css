@@ -1,7 +1,7 @@
 /* styles global */
 
 body {    
-    background-image: url(../images/roger10.jpg);
+    background-image: url(../images/rogerbak.jpg);
     background-attachment: fixed;
     background-size: cover;
     padding: 0;
@@ -228,7 +228,7 @@ footer {
 .slideshow {
     width: 50%;
     height: 500px;
-    margin-left: 25%;
+    margin-left: 22%;
     
 }
 #slide {
@@ -244,12 +244,12 @@ footer {
 
 /* styles sources.html */
 #src {
-    height: inherit;
+    height: 400px;
     width: 50%;
     background-color: rgba(188, 9, 182, 0.32);
     margin-left: 23%;
     margin-bottom: 40px;
-    padding: 20px;
+    padding: 60px 30px;
     color: aliceblue;
 }
 
