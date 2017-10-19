@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">    
+        <title>Roger Waters</title>
+        <meta name="Jared Conover" content="Prénom Nom" >
+        <meta name="description" content="Mettre ici un résumé descriptif du contenu de la page avec des mots-clés" >
+        <meta name="robots" content="index,follow" >
+        <link rel="shortcut icon" type="images/x-icon" href="favicon.ico" >    
+        <link rel="stylesheet" type="text/css" href="../css/style.css" >
+        <script src="js/main.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Fascinate' rel='stylesheet'>
+	
+		<!-- 		
+			commentaire conditionnel pour rendre compatible les nouvelles balises structurantes de HTML5 
+		-->
+		
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+    
+    <body>
+
+    		<script>
+    		      function myFunction() {
+                        alert("Créateur: Jared Conover");
+                    }
+            </script>
+        
+        <header>
+            <div id="title">Contact</div>
+        </header>    
+        
+    
+            <div class="nav">                
+                <div id="nav1"><a href="../pages_web/galerie.html">Galerie Photos</a></div> 
+                <div id="nav2"><a href="../pages_web/sources.html" >Sources</a></div>
+                <div id="nav3"><a href="../pages_web/contact.html">Contact</a></div>
+                <div id="nav4"><a onclick="myFunction()">?</a></div>                
+            </div>
+        
+        <div class="formulaire">
+            <form action="mailto:conover.j@gmail.com">
+                <label for="fname">Prénom:</label>
+                <input type="text" id="fname" name="firstname" placeholder="Votre prénom..">
+                
+                <label for="lname">Nom:</label>
+                <input type="text" id="lname" name="lastname" placeholder="Votre nom..">
+                
+                <label for="lage">Age:</label>
+                <input type="text" id="lname" name="lastname" placeholder="Votre age..">
+                
+                <label for="country">Pays:</label>
+                <select id="country" name="country">
+                  <option value="australia">Australie</option>
+                  <option value="canada">Canada</option>
+                  <option value="ang">Angleterre</option>
+                  <option value="qc">Québec</option>
+                </select>
+                
+                            
+                <h4>Opinion du site:</h4>
+                <label for="radio">Excellent:</label>
+                <input type="radio" name="opinion" value="1">
+                <label for="radio">Bon:</label>
+                <input type="radio" name="opinion" value="2">
+                <label for="radio">Moyenne:</label>
+                <input type="radio" name="opinion" value="3">
+                <label for="radio">Affreux:</label>
+                <input type="radio" name="opinion" value="4">
+                
+                <h4>Vos albums:</h4>
+                <input type="checkbox" name="alb1" value="dostm">DSOTM
+                <input type="checkbox" name="alb1" value="animals">Animals
+                <input type="checkbox" name="alb3" value="wywh">WYWH
+                <input type="checkbox" name="alb4" value="wall">The Wall
+                
+                <h4>Commentaires:</h4>
+                <textarea>Vos commentaires..</textarea>
+                
+                <input type="submit" value="Soumettre">
+                
+            </form>
+        </div>
+        
+        <footer>
+            <div id="home"><a  href="../index.html">Accueil</a></div>
+        </footer>
+        
+    </body>
+</html>

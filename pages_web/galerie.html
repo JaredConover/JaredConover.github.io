@@ -28,22 +28,18 @@
                     }
         </script>
         
-        <script>
-            var myIndex = 0;
-            carousel();
+        <script type="text/javascript">
+            jQuery("#slideshow > div:gt(0)").hide();
 
-            function carousel() {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                for (i = 0; i < x.length; i++) {
-                   x[i].style.display = "none";  
-                }
-                myIndex++;
-                if (myIndex > x.length) {myIndex = 1}    
-                x[myIndex-1].style.display = "block";  
-                setTimeout(carousel, 15000); // Change image every 2 seconds
-                }
-            </script>
+            setInterval(function() {
+              jQuery('#slideshow > div:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('#slideshow');
+            },  3000);
+        </script>
         
         
         
@@ -51,27 +47,31 @@
         <header>
             
             <div id="title">Galerie Photos</div>
-        </header>    
+        </header>   
         
-
-        
-            <div class="nav">                
-                <div id="nav1"><a href="pages_web/galerie.html">Galerie Photos</a></div> 
-                <div id="nav2"><a href="pages_web/sources.html" >Sources</a></div>
-                <div id="nav3"><a href="pages_web/galerie.html">Contact</a></div>
+        <div class="nav">                
+                <div id="nav1"><a href="galerie.html">Galerie Photos</a></div> 
+                <div id="nav2"><a href="sources.html" >Sources</a></div>
+                <div id="nav3"><a href="contact.html">Contact</a></div>
                 <div id="nav4"><a onclick="myFunction()">?</a></div>                
             </div>
         
-        
-        <div id="slideshow">
-            <div id="w3-content w3-section">
-                <img class="mySlides slide" src="../images/roger1.jpg">
-                <img class="mySlides slide" src="../images/roger3.jpg">
-                <img class="mySlides slide" src="../images/roger4.jpg">
-                <img class="mySlides slide" src="../images/roger3.jpg">
-                
+            <div id="slideshow">
+               <div>
+                 <img src="//farm6.static.flickr.com/5224/5658667829_2bb7d42a9c_m.jpg">
+               </div>
+               <div>
+                 <img src="//farm6.static.flickr.com/5230/5638093881_a791e4f819_m.jpg">
+               </div>
+               <div>
+                 Pretty cool eh? This slide is proof the content can be anything.
+               </div>
             </div>
-        </div>   
+        
+            
+        
+        
+        
         
          <div id="galerie">
               <div class="container">
@@ -103,6 +103,15 @@
 
 <div id="home"><a  href="../index.html">Accueil</a></div>
 
+<div id="slideshow">
+            
+                <img class="mySlides" id="slide" src="../images/roger1.jpg">
+                <img class="mySlides" id="slide" src="../images/roger3.jpg">
+                <img class="mySlides" id="slide" src="../images/roger4.jpg">
+                <img class="mySlides" id="slide" src="../images/roger3.jpg">
+                
+            
+        </div>   
 
 
 
