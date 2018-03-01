@@ -1,189 +1,49 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="UTF-8">    
-        <title>Roger Waters</title>
-        <meta name="Jared Conover" content="Prénom Nom" >
-        <meta name="description" content="Mettre ici un résumé descriptif du contenu de la page avec des mots-clés" >
-        <meta name="robots" content="index,follow" >
-        <link rel="shortcut icon" type="images/x-icon" href="favicon.ico" >    
-        <link rel="stylesheet" type="text/css" href="css/style.css" >
-        <script src="js/main.js"></script>
-        <link href='https://fonts.googleapis.com/css?family=Fascinate' rel='stylesheet'>
-	
-		<!-- 		
-			commentaire conditionnel pour rendre compatible les nouvelles balises structurantes de HTML5 
-		-->
-		
-		<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-	</head>
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top:0px;
+}
+</style>
+</head>
+<body>
+
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("April 5, 2018 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
     
-    <body>
-
-    		<script>
-    		      function myFunction() {
-                        alert("Créateur: Jared Conover");
-                    }
-            </script>
-        
-        <header>
-            <div id="title">Roger Waters</div>
-        </header>    
-        
-
-        
-            <div class="nav">                
-                <div id="nav1"><a href="pages_web/galerie.html">Galerie Photos</a></div> 
-                <div id="nav2"><a href="pages_web/sources.html" >Sources</a></div>
-                <div id="nav3"><a href="pages_web/contact.html">Contact</a></div>
-                <div id="nav4"><a onclick="myFunction()">?</a></div>                
-            </div>
-        
-            
-           <div id="photolink">
-                <div class="container">
-                    <div class="col" ><img id="pic1" src="images/roger3.jpg" ></div>
-                    <div class="col" ><img id="pic2" src="images/roger6.jpg" ></div>
-                </div>
-
-                <div class="container">
-                    <div class="col" ><a id="link1" href="pages_web/galerie.html">Galerie de photos</a></div>
-                    <div class="col" ><a id="link2" href="pages_web/sources.html">Sources d'information</a></div>
-                </div>
-            </div> 
-            
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
     
-    				
-        
-        
-        <div id="content">
-    			
-<!--paragraph 1: -->
-    			
-    				
-    			
-    			
-    			
-    				
-                
-        <h2>Introduction</h2>
-    				
-    				
-    				
-    				
-                
-    			
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
 
-    			
-    				
-                
-    				<p>	       Né le 6 septembre 1943 à Great Bookham, dans le Surrey,après le décès de son père en 1944 (traumatisme qui marquera ses compositions, en particulier les albums 'The Wall' et surtout 'The Final Cut'), il vit seul avec sa mère et ses deux frères aînés,2 enfants d'un second mariage avec Lady Carolyn Christie (India et Harry),bassiste, guitariste, chanteur et un des compositeurs du groupe Pink Floyd.Jusqu'à la sortie de "The Wall", et même si des divergences apparaissent entre lui et le reste du groupe dès 1973 et le succès de "The Dark Side of the Moon", Roger Waters partage le leadership de Pink Floyd, les compositions et le chant avec David Gilmour.Après avoir pris en charge l'intégralité des textes des deux albums précédents, en 1979 il signe seul, paroles et musiques, la quasi-totalité des titres de l'album "The Wall".
-                        
-                    La domination de Waters sur Pink Floyd et les fortes tensions internes culminent en 1983 avec la sortie de "The final cut". On peut lire sur la pochette : "a requiem for the post war dream, by roger waters, performed by pink floyd"...Estimant que le groupe n'a plus de raisons d'être, Roger Waters quitte Pink Floyd fin 1985. Durant de nombreux mois se dérouleront des querelles judiciaires avec les autres membres du groupe pour l'utilisation du nom 'Pink Floyd'. En 1987, il devra concéder à Gilmour et Mason le droit d'utiliser ce nom pour la sortie de "A Momentary Lapse Of Reason".Les tensions entre Waters et Gilmour restent fortes jusqu'en 2005 où Bob Geldof réussit à les rassembler pour reformer Pink Floyd à Londres le temps d'un Live 8. 
-                        
-                    Depuis 1984, Roger Waters mène une carrière solo.Se succèdent en particulier un concert mythique (The Wall) devant 300 000 personnes à Berlin, en juillet 1990, et la sortie d'un des albums référence de sa carrière solo, "Amused to Death", en 1992.S'il est surtout connu comme bassiste de Pink Floyd, Roger Waters est également un bon guitariste, électrique et acoustique.Durant sa participation au groupe, il joue successivement sur une basse Hofner, une Rickenbacker et une Fender Precision.En ce qui concerne les guitares électriques, on l'a rarement vu jouer sur autre chose que des Fender Stratocaster.Jusqu'à la sortie de "The Wall", et même si des divergences apparaissent entre lui et le reste du groupe dès 1973 et le succès de "The Dark Side of the Moon", Roger Waters partage le leadership de Pink Floyd, les compositions et le chant avec David Gilmour.Après avoir pris en charge l'intégralité des textes des deux albums précédents, en 1979 il signe seul, paroles et musiques, la quasi-totalité des titres de l'album "The Wall".</p>
-                        
-                   <p> La domination de Waters sur Pink Floyd et les fortes tensions internes culminent en 1983 avec la sortie de "The final cut". On peut lire sur la pochette : "a requiem for the post war dream, by roger waters, performed by pink floyd"...Estimant que le groupe n'a plus de raisons d'être, Roger Waters quitte Pink Floyd fin 1985. Durant de nombreux mois se dérouleront des querelles judiciaires avec les autres membres du groupe pour l'utilisation du nom 'Pink Floyd'. En 1987, il devra concéder à Gilmour et Mason le droit d'utiliser ce nom pour la sortie de "A Momentary Lapse Of Reason".Les tensions entre Waters et Gilmour restent fortes jusqu'en 2005 où Bob Geldof réussit à les rassembler pour reformer Pink Floyd à Londres le temps d'un Live 8. Waters est aussi un redoutable homme de scène. Même s’il sait laisser la place à ses musiciens, l'artiste incarne de tout son être ses chansons, qu’il joue depuis plus de 40 ans. Les expressions de son visage durant de One Of These Days, sa voix qui n’a rien perdu de son aplomb sur Time ou son jeu de guitare inspiré sur Welcome To The Machine en sont autant de preuves.</p>
-    				
-                
-    			
-<!-- paragraph 2: -->
-				
-    				
-    			
-    			
-    			
-    				
-                
-                    <h2>Avec Pink Floyd</h2>
-    				
-    				
-    				
-    				
-                
-    			
-
-    			
-    				
-                
-    				<p> Ils sont considérés à leur début comme un groupe plutôt expérimental qui touche surtout un milieu d'initiés. Le film More, dont ils réalisent la musique en 1969 à la demande du réalisateur Barbet Schroeder, fait connaître leur musique à un plus large public qui lui réserve un bon accueil à un moment où les Beatles ralentissent justement leur cadence de production. En 1970, Roger Waters compose et interprète avec Ron Geesin la bande sonore d'un documentaire sur le corps humain, The Body, comprenant un mélange de sons électroniques très rythmés, de voix humaines et de bruits corporels divers mixés ensemble (en particulier dans la plage Our Song). Cette bande sonore, création authentique plus que simple accompagnement, sort en disque sous le titre Music from the Body. En 1973, le groupe connaît un énorme succès avec The Dark Side of the Moon mais, déjà, les divergences de conception entre Waters et le reste du groupe commencent à se faire sentir. C'est lui qui désormais écrit toutes les paroles des compositions du groupe, et il en vient peu à peu à en assurer seul les musiques aussi : sur Animals (1977), seul le morceau Dogs est cosigné avec David Gilmour.</p>
-    				
-                
-    			
-<!--paragraph 3: -->
-				
-    				
-    			
-    			
-    			
-    				
-                
-                    <h2>1979 et plus</h2>
-    				
-    				
-    				
-    				
-                
-    			
-
-    			
-    				
-                
-    				<p>En 1979, Waters signe seul la totalité des textes et les deux tiers des musiques des titres de l'album The Wall (The Trial est cosigné avec Bob Ezrin, Young Lust, Comfortably Numb et Run Like Hell avec David Gilmour), il supervise également l'adaptation cinématographique. Gilmour et Bob Ezrin jouent néanmoins un rôle important dans la conception de l'album : Ezrin aide notamment à rendre plus compréhensible la trame scénaristique de base de Waters, et Gilmour agit comme directeur artistique de la tournée qui s'ensuit. Durant l'enregistrement de l'album, Rick Wright est renvoyé du groupe sous la pression de Waters qui menace de tout bonnement arrêter la production de l'album si Rick Wright ne part pas. La tension entre Waters et Gilmour monte d'un cran durant l'enregistrement de The Wall lorsque Waters ajoute son nom sur la musique de Comfortably Numb. Durant le tournage du film The Wall, Waters mène la vie impossible à Alan Parker (le réalisateur) en donnant continuellement des ordres contradictoires à l'équipe, ainsi qu'à l'acteur principal Bob Geldof.
-
-					L'album The Final Cut, sorti en 1983, marque l'apogée de la domination de Waters sur le groupe : le dos de l'album indique qu'il s'agit d'un « album de Roger Waters interprété par Pink Floyd ». Nick Mason se fait de plus en plus effacé (il est remplacé par Andy Newmark sur le dernier titre) et Gilmour se querelle de plus en plus fréquemment avec Waters qui refuse toute suggestion artistique. Pink Floyd devenant ainsi la propriété de Waters, Gilmour et Mason ne faisant plus que de la figuration dans le groupe, jouant ici et là lorsque c'est vraiment nécessaire.</p>
-    				
-                
-    			
-<!--paragraph 4: -->
-				
-    				
-    			
-    			
-    			
-    				
-                
-        <h2>En Solo</h2>
-    				
-    				
-    				
-    				
-                
-    			
-
-    			
-    				
-                
-    				<p> Entre-temps paraît son premier album solo, The Pros and Cons of Hitch Hiking (1984), une étrange plongée dans les rêves d'un homme en proie à la crise de la quarantaine. Ce projet, conçu au même moment que The Wall, avait été proposé aux autres membres de Pink Floyd qui le rejetèrent, le trouvant trop personnel. L'album est enregistré avec de prestigieux invités, notamment Eric Clapton à la guitare et David Sanborn au saxophone. L'album ne se vend pas à hauteur des espoirs de Waters, en dépit (ou peut être à cause) du scandale provoqué par sa pochette, qui représente une femme nue, vue de dos, faisant de l'auto-stop. La tournée qui s'ensuit connaît un succès modéré, mais insuffisant pour la rentabiliser : Waters aurait perdu près de 700 000 dollars à cette occasion.
-
-					Après avoir participé à la bande originale du film When the Wind Blows (1986), Roger Waters sort son deuxième album, Radio K.A.O.S., en 1987. Il s'agit à nouveau d'un album-concept, centré sur un jeune handicapé nommé Billy qui entend des ondes radio dans sa tête. L'album, comme la tournée de promotion, sont totalement éclipsés par le retour de Pink Floyd, qui sort l'album A Momentary Lapse of Reason et entame une tournée mondiale la même année.
-
-					Le 21 juillet 1990, après la chute du mur de Berlin, Roger Waters donne The Wall en concert sur la Potsdamer Platz, devant 300 000 personnes, avec de nombreux invités dont Scorpions, Sinéad O'Connor, Van Morrison et Cyndi Lauper. Il s'agit du deuxième plus gros concert jamais donné en Europe après celui de Jean Michel Jarre à La Défense, le 14 juillet de la même année, qui totalisa 1 million de spectateurs.</p>
-    				
-                
-    			
-            </div>
-        
-        
-    			
-    	<footer></footer>	
-            
-    </body>
-                        
+</body>
 </html>
-
-<!--
-    			
-    				
-
-    				
-  <div ><img id="foot" src="images/shakedit3.gif"></div>  				
-    				
-    				
-    				
-
-    			
-
--->
