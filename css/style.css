@@ -1,0 +1,27 @@
+
+p {
+  text-align: center;
+  font-size: 80px;
+  margin-top:0px;
+  color: #bafcff;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  /*position: absolute;
+    top: 140%;
+    left: 25%;*/
+  
+  
+}
+
+body{
+	 background-image: url(../images/pokee.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    position: relative;
+}
+
+h1 { 
+	color: red;
+ }
