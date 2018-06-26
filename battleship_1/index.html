@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="script_2.js"></script>
+    <meta charset="UTF-8">
+    <title>BattleShip V1</title>
+</head>
+<body>
+<div id="grid"></div>
+<span>
+<input type="text" id="coordX" placeholder="x" style="width: 15px">
+<input type="text" id="coordY" placeholder="y" style="width: 15px">
+<button onclick="grid.fire()">Fire</button>
+    </span>
+
+<script>
+    document.getElementById("grid").innerHTML= grid.showShots();
+
+</script>
+</body>
+</html>
