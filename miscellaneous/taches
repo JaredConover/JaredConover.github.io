@@ -1,0 +1,31 @@
+Taches a completer:
+
+**********************Basic************************
+-right div : list of activities
+ functionalities:
+    -add activity, replaces list
+    -
+
+-middle div : edit activity and show stats
+functionalities:
+    -automatically get activity from user selection
+    -display and edit selected activity's fields
+    -display a graph or table related to activity
+
+-left div: timer
+functionalities:
+    -automatically get activity from user selection
+    -set the duration
+    -run timer with countdown
+    -play sound on completion
+    -store timed session information when completed
+
+-persistence avec local storage
+
+
+********************Plus****************************
+-new view that opens fullscreen with start of timer
+-"winding" timer to set time
+-moar stats
+-menus that open/close dynamically
+

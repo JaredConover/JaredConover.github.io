@@ -1,0 +1,17 @@
+#form_timer .error {
+    border : 2px solid red;
+}
+
+/* Signaler erreur les checkbox  */
+#form_timer .cberror {
+    outline-color : red;
+    outline-style : solid;
+    outline-width : thin;
+}
+
+/* Signaler erreur les checkbox  */
+#form_timer .error_msg {
+    display : inline-block;
+    margin:0;
+    color:red;
+}
