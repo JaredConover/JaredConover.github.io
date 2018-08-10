@@ -1,0 +1,33 @@
+body{
+    background-color: #2c2c2c;
+}
+#page{
+
+    min-height: 96vh;
+    min-width: 90vh;
+    display: flex;
+    justify-content: space-around;
+    /*align-items: center;*/
+    flex-wrap: wrap;
+}
+
+.cont {
+    position:relative;
+}
+
+.cadre {
+    margin: 20px;
+    position: absolute;
+    top: -20px;
+    left: -15px;
+}
+
+.photo {
+    margin: 30px;
+    /*width: 250px;*/
+    max-height: 70vh;
+}
+
+.invisible{
+    display: none;
+}

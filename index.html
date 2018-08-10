@@ -1,167 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Optimus Time |  Best App Ever</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="5">
+        <title>Title</title>
+        <script src="script/tools.js"></script>
+        <script src="script/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div id="page">
 
-    <script type="text/javascript" src="script/model.js"></script>
-    <link type="text/css" rel="stylesheet" href="css/styles.css"/>
-    <link type="text/css" rel="stylesheet" href="css/main.css"/>
-    <link type="text/css" rel="stylesheet" href="css/activity_stats.css"/>
-    <link type="text/css" rel="stylesheet" href="css/validation.css"/>
-    <link type="text/css" rel="stylesheet" href="css/graph.css"/>
-
-</head>
-<body class="container">
-
-<!-- TIMER -->
-<section id="timer_section" class="item_timer">
-    <div>
-        <h3 id="timer_titre_activity">activity</h3>
-    </div>
-    <div>
-        <form id="form_timer" name="form_timer">
-            <p id="firstMessageError" class="error_msg">Please select an activity.</p>
-            <div>
-                <label class="label_timer">Add time (minutes)</label>
-                <input type="number" min="5" max="360" id="timeIn" name="timeIn" class="form_input"/>
-                <p class="error_msg">Please add a number.</p>
-            </div>
-            <div>
-                <label class="label_timer">Focus</label>
-                <input type="text" id="focus" name="focus" class="form_input"/>
-                <p class="error_msg">Please add a focus.</p>
-            </div>
-            <div>
-                <label class="label_timer">Notes</label>
-                <input type="text" id="notes" name="notes" class="form_input"/>
+            <div class="cont">
+                <img class="photo" src="https://source.unsplash.com/featured/?nature,water" alt=""/>
+                <img class="cadre" src="image/animated_frame.png"/>
             </div>
 
-            <label id="myTime" class="label_timer countdown">Countdown</label>
-
-            <img src="images/hourglass_1.png" id="imageTime" class="img_timer">
-
-
-            <div class="btnstimer">
-                <input type="submit" value="START" id="startTime" name="startTime" class="btn_blanc">
-                <input type="submit" value="PAUSE" id="pauseTime" name="pauseTime" class="btn_blanc">
-                <input type="submit" value="STOP" id="stopTime" name="stopTime" class="btn_blanc">
+            <div class="cont">
+                <img class="photo" src="https://source.unsplash.com/featured/?city, skyline" alt=""/>
+                <img class="cadre" src="image/animated_frame.png"/>
             </div>
-            <p id="timeOut"></p>
 
-        </form>
-    </div>
-</section>
-<!-- END TIMER -->
-
-<!-- STATS -->
-<section id="stats_section" class="item item_stats">
-    <h3>statistics</h3>
-
-    <!-- TITLE -->
-    <form method="post">
-        <div id="div_title">
-            <h5 class="title">Title</h5>
-            <hr/>
-            <div id="div_title_content">
-                <p></p>
+            <div class="cont">
+                <img class="photo" src="https://source.unsplash.com/featured/?water" alt=""/>
+                <img class="cadre" src="image/animated_frame.png"/>
             </div>
-        </div>
-    </form>
-    <!-- END TITLE -->
 
-    <!-- DESC -->
-    <form method="post">
-        <div id="div_desc">
-            <label for="stats_desc" class="desc title">Description</label>
-            <hr/>
-            <div id="div_desc_content">
-                <p></p>
-                <img src="images/icon_edit.png" id="edit_desc" />
+            <div class="cont">
+                <img class="photo" src="https://source.unsplash.com/featured/?children" alt=""/>
+                <img class="cadre" src="image/animated_frame.png"/>
             </div>
-            <div id="div_desc_content_to_edit">
-                <textarea id="stats_desc" name="stats_desc" class="form_input"></textarea>
-                <img src="images/icon_save.png" id="save_desc" />
+
+            <div class="cont">
+                <img class="photo" src="https://source.unsplash.com/featured/?explosion" alt=""/>
+                <img class="cadre" src="image/animated_frame.png"/>
             </div>
-        </div>
-    </form>
-    <!-- END DESC -->
 
-    <!-- GOAL -->
-    <form method="post">
-        <div id="div_goal">
-            <label for="stats_goal" class="title">Goal</label>
-            <hr/>
-            <div id="div_goal_content">
-                <p></p>
-                <img src="images/icon_edit.png" id="edit_goal" />
+            <div class="cont">
+                <img class="photo" src="https://source.unsplash.com/featured/?mountains" alt=""/>
+                <img class="cadre" src="image/animated_frame.png"/>
             </div>
-            <div id="div_goal_content_to_edit">
-                <textarea id="stats_goal" name="stats_goal" class="form_input"></textarea>
-                <img src="images/icon_save.png" id="save_goal" />
+
+            <div class="cont">
+                <img class="photo" src="https://source.unsplash.com/featured/?clocks" alt=""/>
+                <img class="cadre" src="image/animated_frame.png"/>
             </div>
-        </div>
-    </form>
-    <!-- END GOAL -->
 
-    <!-- BTN DELETE ACTIVITY -->
-    <button id="delete_activity" class="btn_violet margin_top">Delete Activity</button>
-    <!-- END BTN DELETE ACTIVITY -->
+            <div class="cont">
+                <img class="photo" src="https://source.unsplash.com/featured/?fruit" alt=""/>
+                <img class="cadre" src="image/animated_frame.png"/>
+            </div>
 
-    <!-- TIME AVERAGE -->
-    <div>
-        <h5>Time Average</h5>
-        <hr/>
-        <div id="div_time_average"></div>
-    </div>
-    <!-- AVERAGE -->
+            <div class="cont">
+                <img class="photo" src="https://source.unsplash.com/featured/?farm" alt=""/>
+                <img class="cadre" src="image/animated_frame.png"/>
+            </div>
 
-    <!-- 15 DAYS -->
-    <div>
-        <h5>Last 15</h5>
-        <hr/>
-        <div id="div_15days" class="chart"></div>
-    </div>
-    <!-- END 15 DAYS -->
-
-    <!-- HISTORY -->
-    <div id="div_history">
-        <h5>History</h5>
-        <hr/>
-        <div id="div_table_sessions" class="scroll table_historique">
+            <div class="cont">
+                <img class="photo" src="https://source.unsplash.com/featured/?rocket" alt=""/>
+                <img class="cadre" src="image/animated_frame.png"/>
+            </div>
 
         </div>
-    </div>
-    <!-- END HISTORY -->
-
-</section>
-<!-- END STATS -->
-
-<!-- LISTE ACTIVITIES -->
-<section id="menu_act_section" class="item item_list">
-    <h3>activities</h3>
-
-    <button id="btn_add_activity" class="btn_blanc">add</button>
-
-    <div id="create_new_activity">
-        <input type="text" id="title" class="form_input" placeholder="Title">
-        <textarea id="desc" placeholder="Description" class="form_input"></textarea>
-        <input type="text" id="goal" placeholder="Current Goal" class="form_input">
-        <button id="confirm_new_activity" class="btn_blanc">Create</button>
-        <button id="cancel_new_activity" class="btn_blanc">Cancel</button>
-    </div>
-
-    <ul id="activities">Activities</ul>
-
-</section>
-<!-- END LISTE ACTIVITIES -->
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://d3js.org/d3.v3.min.js"  charset="utf-8"></script>
-<script type="text/javascript" src="script/d3.js"></script>
-<script type="text/javascript" src="script/activity_stats.js"></script>
-<script type="text/javascript" src="script/main.js"></script>
-<script type="text/javascript" src="script/time.js"></script>
-<script type="text/javascript" src="script/graph.js"></script>
-</body>
+    </body>
 </html>
