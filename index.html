@@ -2,65 +2,114 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="refresh" content="5">
-        <title>Title</title>
+        <title>Floor Plan</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="script/tools.js"></script>
         <script src="script/main.js"></script>
+        <script src="script/sauvegarde_plusieurs.js"></script>
+        <script src="script/dragAndDrop.js"></script>
+        <script src="script/testdrag.js"></script>
+        <script src="script/uploadImage.js"></script>
+
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
     </head>
     <body>
+        <!--*************Bare de navigation**************-->
+        <div id="controls" class="navbar">
+            <div id="logo"><img id="logoimg" src="images/logo.png" alt="Floor Plan">
+            </div>
+            <div id="navbar1">
+                <button id="btn_new" class="button button5 btn btn-6 btn-6f"><img class="navicon" src="images/add.png"></button>
+                <button id="btn_del" class="button button5 btn btn-6 btn-6f"><img class="navicon" src="images/del.png"></button>
+                <div id="select">
+                    <select id="sel_mes_plans"></select>
+                </div>
+            </div>
+        </div>
+        <!--*************Main**************-->
         <div id="page">
+            <!--*************Menu des elements************** -->
+            <div id="menu">
+                <img class="container" data-path="images/forms.svg#sofa" data-dx="75" data-dy="86"
+                     class="draggable drg tooltip-trigger"
+                     draggable="true"
+                     src="images/sofa.svg" width="100px" height="100px"
+                     data-tooltip-text="tapis">
+                <img class="container" data-path="images/forms.svg#tapis" data-dx="75" data-dy="86"
+                     class="draggable drg tooltip-trigger"
+                     draggable="true"
+                     src="images/tapis.svg" width="100px" height="100px"
+                     data-tooltip-text="tapis">
+                <img class="container" data-path="images/forms.svg#tableBasse" data-dx="75" data-dy="86"
+                     class="draggable drg tooltip-trigger"
+                     draggable="true"
+                     src="images/tableBasse.svg" width="100px" height="100px"
+                     data-tooltip-text="Table Basse">
+                <img class="container" data-path="images/forms.svg#chambre" data-dx="75" data-dy="86"
+                     class="draggable drg tooltip-trigger"
+                     draggable="true" src="images/chambre.svg" width="100px" height="100px"
+                     data-tooltip-text="chambre">
+                <img class="container" data-path="images/forms.svg#commode" data-dx="75" data-dy="86"
+                     class="draggable drg tooltip-trigger"
+                     draggable="true" src="images/commode.svg" width="100px" height="100px"
+                     data-tooltip-text="commode">
+                <img class="container" data-path="images/forms.svg#piano" data-dx="75" data-dy="86"
+                     class="draggable drg tooltip-trigger"
+                     draggable="true"
+                     src="images/piano.svg" width="100px" height="100px"
+                     data-tooltip-text="piano">
+                <img class="container" data-path="images/forms.svg#chaise" data-dx="75" data-dy="86"
+                     class="draggable drg tooltip-trigger"
+                     draggable="true" src="images/chaise.svg" width="100px" height="100px"
+                     data-tooltip-text="seat">
+                <img class="container" data-path="images/forms.svg#table" data-dx="75" data-dy="86"
+                     class="draggable drg tooltip-trigger"
+                     draggable="true"
+                     src="images/table.svg" width="100px" height="100px"
+                     data-tooltip-text="table">
+                <img class="container" data-path="images/forms.svg#cactus" data-dx="75" data-dy="86"
+                     class="draggable drg tooltip-trigger"
+                     draggable="true" src="images/cactus.svg" width="100px" height="100px"
+                     data-tooltip-text="cactus">
+                <img class="container" data-path="images/forms.svg#litj" data-dx="75" data-dy="86"
+                     class="draggable drg tooltip-trigger"
+                     draggable="true"
+                     src="images/litj.svg" width="100px" height="100px"
+                     data-tooltip-text="bed">
+                <img class="container" data-path="images/forms.svg#couch_3_seat" class="draggable drg tooltip-trigger"
+                     draggable="true"
+                     src="images/couch_3_seat.svg" width="100px" height="100px"
+                     data-tooltip-text="couch 3 seat">
+                <img class="container" data-path="images/forms.svg#pool_table" class="draggable drg tooltip-trigger"
+                     draggable="true"
+                     src="images/pool_table.svg" width="100px" height="100px"
+                     data-tooltip-text="pool table">
+                <img class="container" data-path="images/forms.svg#door" class="draggable drg tooltip-trigger"
+                     draggable="true"
+                     src="images/door.svg"
+                     width="100px" height="100px" data-tooltip-text="door">
+                <img class="container" class="draggable drg tooltip-trigger" draggable="true" src="images/rug_round.svg"
+                     width="100px" height="100px" data-tooltip-text="rug round">
 
-            <div class="cont">
-                <img class="photo" src="https://source.unsplash.com/featured/?nature,water" alt=""/>
-                <img class="cadre" src="image/animated_frame.png"/>
             </div>
+            <!--*************Le plan************** -->
+            <div id="plan_container">
 
-            <div class="cont">
-                <img class="photo" src="https://source.unsplash.com/featured/?city, skyline" alt=""/>
-                <img class="cadre" src="image/animated_frame.png"/>
+                <!--<svg id="plan" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2850 1740" >-->
+                <svg id="plan" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 2651 1382">
+
+                    <!--<use href="images/forms.svg#piano" id="forme5" class="draggable " ></use>-->
+                    <!--<g id="tooltip" visibility="hidden" dominant-baseline="hanging">-->
+                    <!--<rect x="800" y="800" width="250" height="250" class="tooltip-trigger" data-tooltip-text="rouge" fill="red"></rect>-->
+                        <!--<rect width="80" height="24" fill="white" rx="2" ry="2"/>-->
+                        <!--<text x="4" y="6">Tooltip</text>-->
+                    <!--</g>-->
+
+                </svg>
             </div>
-
-            <div class="cont">
-                <img class="photo" src="https://source.unsplash.com/featured/?water" alt=""/>
-                <img class="cadre" src="image/animated_frame.png"/>
-            </div>
-
-            <div class="cont">
-                <img class="photo" src="https://source.unsplash.com/featured/?children" alt=""/>
-                <img class="cadre" src="image/animated_frame.png"/>
-            </div>
-
-            <div class="cont">
-                <img class="photo" src="https://source.unsplash.com/featured/?explosion" alt=""/>
-                <img class="cadre" src="image/animated_frame.png"/>
-            </div>
-
-            <div class="cont">
-                <img class="photo" src="https://source.unsplash.com/featured/?mountains" alt=""/>
-                <img class="cadre" src="image/animated_frame.png"/>
-            </div>
-
-            <div class="cont">
-                <img class="photo" src="https://source.unsplash.com/featured/?clocks" alt=""/>
-                <img class="cadre" src="image/animated_frame.png"/>
-            </div>
-
-            <div class="cont">
-                <img class="photo" src="https://source.unsplash.com/featured/?fruit" alt=""/>
-                <img class="cadre" src="image/animated_frame.png"/>
-            </div>
-
-            <div class="cont">
-                <img class="photo" src="https://source.unsplash.com/featured/?farm" alt=""/>
-                <img class="cadre" src="image/animated_frame.png"/>
-            </div>
-
-            <div class="cont">
-                <img class="photo" src="https://source.unsplash.com/featured/?rocket" alt=""/>
-                <img class="cadre" src="image/animated_frame.png"/>
-            </div>
-
         </div>
     </body>
+    <script src="script/InfoBulle.js"></script>
 </html>

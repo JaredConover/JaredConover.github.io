@@ -1,0 +1,20 @@
+<svg id="door" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="164.433" height="155.964">
+    <defs>
+        <pattern xlink:href="#a" id="b" patternTransform="matrix(0 -.48 .48 0 295.311 824.473)"/>
+        <pattern xlink:href="#a" id="c" patternTransform="matrix(0 -.48 .48 0 295.311 824.473)"/>
+        <pattern patternTransform="matrix(.48 0 0 .48 152.53 527.48)" patternUnits="userSpaceOnUse" width="10" height="10" id="a">
+            <image width="1" height="1" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABHNCSVQICAgIfAhkiAAAADxJREFUGJWN0DkSACAMw0CZ///ZVDAcCUH1VpJtUySJ9oNsv+FAQA5XlMIThTBCF8zQBl9owgoBCPh5TgfgvCAOUfSmXgAAAABJRU5ErkJggg==" transform="scale(10)"/>
+        </pattern>
+    </defs>
+    <g opacity=".5" color="#000">
+        <path style="marker:none" d="M182.881 938.653h10.281c2.274-4.855.055-12.038.594-17.781 2.473-8.45-4.647-8.437-10.875-7.813v25.594z" fill="url(#b)" overflow="visible" transform="translate(-173.774 -792.702)"/>
+        <path style="marker:none" d="M318.725 935.465c.294 4.27 5.846 3.367 10.375 3.157v-25.97h-9c-2.342 5.835-.328 13.475-1 20-.314 1.112-.427 2.057-.375 2.813z" fill="url(#c)" overflow="visible" transform="translate(-173.774 -792.702)"/>
+    </g>
+    <g opacity=".5">
+        <path d="M9.107 146.857h146.219M155.326 119.576H9.107" fill="none" stroke="#000" stroke-width="4.041" stroke-miterlimit="10"/>
+        <g fill="none" stroke="#000" stroke-width="2.155" stroke-linecap="square" stroke-miterlimit="10">
+            <path d="M26.825 119.585C26.825 58.19 76.582 8.434 137.95 8.434v111.15H26.825zM144.765 146.847H20.01v-27.262h124.755v27.262z" stroke-width="2.6937499999999996"/>
+        </g>
+        <path style="marker:none" color="#000" fill="#fff" overflow="visible" d="M20.01 146.848v-27.262h124.755v27.262z"/>
+    </g>
+</svg>
