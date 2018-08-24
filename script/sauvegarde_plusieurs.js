@@ -77,7 +77,6 @@ function load_mes_plans() {
         plan_svg.innerHTML = p.xml;
         plan_svg.style.backgroundImage = 'url('+p.fond+')';
         brancher_listeners();
-
         console.log(p.titre + " chargee");
     } else {
         console.log("no plans");
@@ -109,10 +108,8 @@ function changer_plan(titre) {
     console.log("plan " + titre + " chargee");
 }
 function nouveau_plan(titre) {
-    // let xml = create_libel().innerHTML;
-    let xml = "<text class=\"tooltip-trigger\" id=\"tooltip\" x=\"10\" y=\"190\" visibility=\"hidden\">Tooltip</text>";
-    console.log("new xml: ", xml);
-    mesPlans.plans.push(new PlanStockee(titre, xml));
+
+    mesPlans.plans.push(new PlanStockee(titre, ""));
     changer_plan(titre);
 }
 function supprimer_plan(titre) {
@@ -149,6 +146,7 @@ function changer_selected(titre) {
             o.setAttribute("selected", "true");
     }
 }
+
 function click_new() {
     let new_titre = prompt("Titre du  plan", "Nouveau plan");
     if (new_titre !== null)
@@ -161,13 +159,5 @@ function click_del() {
         supprimer_plan(mesPlans.courant);
 }
 
-function create_libel(){
-    let libel = document.createElement("text");
-    libel.setAttribute("id", "tooltip");
-    libel.setAttribute("x", "10");
-    libel.setAttribute("y", "190");
-    libel.setAttribute("visibility", "hidden");
-    libel.classList.add("tooltip-trigger");
-    return libel;
-}
+
 

@@ -1,5 +1,5 @@
 "use strict";
-
+let cpt = 1;
 let data = null;
 let scale_factor = 1.75;
 
@@ -38,47 +38,21 @@ function drop(ev) {
         let indexHashtag = data.indexOf("#");
         let valueTool = data.substr(indexHashtag).substr(1);
         useElem.setAttribute("data-tooltip-text",valueTool);
-        useElem.setAttribute("x", (pos.x - 37) *2 + "");
-        useElem.setAttribute("y", (pos.y - 43) *2 + "");
-
-        let foreign = document.createElementNS("http://www.w3.org/2000/svg", "foreignObject");
-        foreign.setAttribute("x", (pos.x - 37 - 20) *scale_factor + "");
-        foreign.setAttribute("y",  (pos.y - 43 - 30) *scale_factor + "");
-
-        let input = document.createElement("input");
-        input.setAttribute("type", "text");
-        input.setAttribute("value", data.substr(indexHashtag).substr(1));
-        input.setAttribute("class", "draggable input");
-        input.setAttribute("font-size", "500");
-       // input.setAttribute("type", "hidden");
-
-        let btn = document.createElement("input");
-        btn.setAttribute("value", "OK");
-        btn.setAttribute("class", "draggable btn");
-        btn.setAttribute("type", "submit");
-        btn.setAttribute("style", "display:inline-block");
-
-
-
-        foreign.appendChild(input);
-        foreign.appendChild(btn);
+        useElem.setAttribute("x", (pos.x - 37) *scale_factor + "");
+        useElem.setAttribute("y", (pos.y - 43) *scale_factor + "");
 
         let libelle = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        libelle.setAttributeNS(null, "x", (pos.x)+ "");
-        libelle.setAttributeNS(null, "y", (pos.y ) + "");
+        libelle.setAttributeNS(null, "x", (pos.x  -10)* scale_factor+ "");
+        libelle.setAttributeNS(null, "y", (pos.y - 43 - 20) *scale_factor + "");
+
         let textNode = document.createTextNode(valueTool);
         libelle.appendChild(textNode);
-        libelle.setAttribute("class", "draggable libelle");
-        libelle.setAttribute("visibility", "visible");
+       libelle.setAttribute("style", "font-size:30px");
         libelle.classList.add("libelle");
+        //useElem.setAttribute("class", "draggable");
 
-        btn.addEventListener("click", function(){
-            let val = input.value;
-            textNode.nodeValue = val;
-        });
 
         console.log(gElem);
-        gElem.appendChild(foreign);
         gElem.appendChild(libelle);
         gElem.appendChild(crossElem);
         gElem.appendChild(useElem);
@@ -102,24 +76,55 @@ function brancher_listeners() {
 }
 
 function select_form(evt) {
+    let svgElem = document.getElementsByTagName("svg")[0];
+    let pos = event_to_xy(svgElem, evt);
+    evt.preventDefault();
 
     console.log("je double clique");
     let grp_id = evt.target.parentNode.id;
+    let gElem = evt.target.parentNode;
+    console.log("le evt : ", evt.target.parentNode);
     let crossElem = get_by_class(grp_id, "croix");
     let libelle = get_by_class(grp_id, "libelle");
-    let input = get_by_class(grp_id, "input");
+    let fo = get_by_class(grp_id, "foreignObj");
 
     console.log(crossElem);
+    let foreign = document.createElementNS("http://www.w3.org/2000/svg", "foreignObject");
+    foreign.setAttribute("width", 500);
+    foreign.setAttribute("height", 300);
+    foreign.setAttribute("style", "font-size:20px");
+
+    let editLibelle = document.createElement("input");
+    let btn = document.createElement("input");
 
     if (crossElem.getAttribute("visibility") === "hidden"){
         crossElem.setAttribute("visibility", "visible");
-      //  input.setAttribute("type", "visible");
-        libelle.setAttribute("visibility", "hidden");
+        let positionCroix = crossElem.getBoundingClientRect();
+        foreign.setAttribute("x", (positionCroix.right - 37 - 210) *scale_factor + "");
+        foreign.setAttribute("y",  (positionCroix.bottom - 43 - 110) *scale_factor + "");
+        foreign.classList.add("foreignObj");
+
+
+        editLibelle.setAttribute("type", "text");
+        editLibelle.setAttribute("class", "draggable editLibelle");
+        editLibelle.setAttribute("font-size", 50);
+        editLibelle.setAttribute("placeholder", "tapez ici");
+
+        btn.setAttribute("value", "OK");
+        btn.setAttribute("class", "draggable btn");
+        btn.setAttribute("type", "submit");
+
+        btn.addEventListener("click", function(){
+            let val = editLibelle.value;
+            libelle.textContent = val;
+        });
+        foreign.appendChild(editLibelle);
+        foreign.appendChild(btn);
+        gElem.insertBefore(foreign, gElem.firstChild);
     }
     else{
         crossElem.setAttribute("visibility", "hidden");
-      //  input.setAttribute("type", "hidden");
-        libelle.setAttribute("visibility", "visible");
+        fo.remove();
     }
 }
 
